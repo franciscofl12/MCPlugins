@@ -1,0 +1,9 @@
+name: RandomTP 
+version: 1.0
+author: Popixisko
+main: org.popixisko.randomtp.Main
+description: Simple Random Teleport plugin.
+
+commands:
+  randomtp:
+   description: The command of the plugin.
