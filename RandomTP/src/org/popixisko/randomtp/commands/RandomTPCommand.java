@@ -20,7 +20,7 @@ public class RandomTPCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (!(sender instanceof Player)) {
-			sender.sendMessage("Only players may execute this command!");
+			sender.sendMessage("Solo jugadores con este permiso pueden usar el comando!");
 			return true;
 		}
 		Player p = (Player) sender;
