@@ -1,5 +1,5 @@
 name: RandomTP 
-version: 1.0
+version: 1.1
 author: Popixisko
 main: org.popixisko.randomtp.Main
 description: Simple Random Teleport plugin.
