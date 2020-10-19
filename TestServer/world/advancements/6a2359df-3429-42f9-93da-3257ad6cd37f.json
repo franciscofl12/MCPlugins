@@ -62,6 +62,9 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:beach": "2020-10-19 17:29:39 +0200",
+      "minecraft:river": "2020-10-19 18:29:39 +0200",
+      "minecraft:lukewarm_ocean": "2020-10-19 18:29:13 +0200",
+      "minecraft:stone_shore": "2020-10-19 18:29:41 +0200",
       "minecraft:plains": "2020-10-19 17:30:09 +0200"
     },
     "done": false

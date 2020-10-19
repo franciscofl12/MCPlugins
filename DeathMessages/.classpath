@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/usuario/Documents/GitHub/Plugins/TestServer/spigot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/franc/OneDrive/Documentos/GitHub/Plugins/TestServer/spigot.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
