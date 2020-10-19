@@ -14,10 +14,6 @@ public class RandomTPCommand implements CommandExecutor {
 	@SuppressWarnings("unused")
 	private Main plugin;
 	
-	double x = Math.round(Math.random()*10000);
-	double y = 100;
-	double z = Math.round(Math.random()*10000);
-	
 	public  RandomTPCommand(Main plugin) {
 		this.plugin = plugin;
 		plugin.getCommand("randomtp").setExecutor(this);
@@ -33,6 +29,9 @@ public class RandomTPCommand implements CommandExecutor {
 		
 		if (p.hasPermission("randomtp.use")) {
 			p.sendMessage("Vas a ser teletransportado a unas cordenadas.");
+			double x = Math.round(Math.random()*10000);
+			double y = 100;
+			double z = Math.round(Math.random()*10000);
 			p.teleport(new Location(Bukkit.getWorld("world"), x, y , z));
 			p.getPotionEffect(PotionEffectType.SLOW_FALLING);
 			return true;
