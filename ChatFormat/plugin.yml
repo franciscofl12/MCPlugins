@@ -1,0 +1,5 @@
+name: ChatFormat
+version: 1.0
+main: me.franciscofl12.chatformat.Main
+description: Plugin para cambiar el formato del chat 
+author: Xisko

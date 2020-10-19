@@ -1,0 +1,9 @@
+name: PrivateMessage
+version: 1.0
+main: me.franciscofl12.privatemessage.Main
+description: Plugin para mensajes privados
+author: Xisko
+
+commands:
+  msg:
+   description: The command of the plugin.

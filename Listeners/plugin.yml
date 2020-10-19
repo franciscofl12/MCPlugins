@@ -1,5 +1,5 @@
 name: Listeners
-version: 1.1
+version: 1.2
 author: Popixisko
 main: org.popixisko.listeners.Main
 description: Simple Listener Teleport plugin.
