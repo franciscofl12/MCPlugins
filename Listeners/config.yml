@@ -1,3 +1,5 @@
 firstJoin_message: '&a<player> &7ha entrado al servidor por primera vez!'
 
 join_message: '&a<player> &7ha entrado al servidor!'
+
+leave_message: '&a<player> &7ha entrado al servidor!'
