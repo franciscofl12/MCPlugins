@@ -1,0 +1,5 @@
+name: DeathMessages
+version: 1.1
+main: org.popixisko.deathmessages.Main
+description: Plugin de mensajes de muerte
+author: popixisko

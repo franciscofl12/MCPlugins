@@ -13,7 +13,6 @@ public class PlayerDeathListener implements Listener {
 		private static Main plugin;
 		
 		public PlayerDeathListener (Main plugin) {
-			
 			this.plugin = plugin;
 			
 			Bukkit.getPluginManager().registerEvents(this, plugin);
