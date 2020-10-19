@@ -24,13 +24,7 @@ public class JoinListener implements Listener {
 		Player p = e.getPlayer();
 		
 		e.setJoinMessage(null);
-		
-		if (p.hasPlayedBefore()) {
-			Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("firstJoin_message").replace("<player>", p.getName())));
-		} 
-		else {
-			Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("join_message").replace("<player>", p.getName())));
-		}
+		Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("join_message").replace("<player>", p.getName())));
 	}
 	
 	@EventHandler
