@@ -1,16 +1,22 @@
 package org.popixisko.randomtp.commands;
 
-import org.popixisko.randomtp.Main;
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffectType;
+import org.popixisko.randomtp.Main;
 
 public class RandomTPCommand implements CommandExecutor {
 	
 	@SuppressWarnings("unused")
 	private Main plugin;
 	
+	double x = Math.round(Math.random()*10000);
+	double y = 100;
+	double z = Math.round(Math.random()*10000);
 	
 	public  RandomTPCommand(Main plugin) {
 		this.plugin = plugin;
@@ -27,6 +33,8 @@ public class RandomTPCommand implements CommandExecutor {
 		
 		if (p.hasPermission("randomtp.use")) {
 			p.sendMessage("Vas a ser teletransportado a unas cordenadas.");
+			p.teleport(new Location(Bukkit.getWorld("world"), x, y , z));
+			p.getPotionEffect(PotionEffectType.SLOW_FALLING);
 			return true;
 		} else {
 			p.sendMessage("No tienes permisos topo.");
