@@ -26,12 +26,13 @@ public class RandomTPCommand implements CommandExecutor {
 			return true;
 		}
 		Player p = (Player) sender;
+		System.out.println("p.hasPermission(\"randomtp.use\") " + p.hasPermission("randomtp.use"));
 		
 		if (p.hasPermission("randomtp.use")) {
 			p.sendMessage("Vas a ser teletransportado a unas cordenadas.");
 			double x = Math.round(Math.random()*10000);
 			double y = 100; 
-			double z = Math.round(Math.random()*10000);
+			double z = Math.round(Math.random()*10000);	
 			p.teleport(new Location(Bukkit.getWorld("world"), x, y , z));
 			p.getPotionEffect(PotionEffectType.SLOW_FALLING);
 			return true;
