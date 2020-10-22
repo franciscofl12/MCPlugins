@@ -1,6 +1,7 @@
 package org.popixisko.deathmessages.listeners;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,13 +22,24 @@ public class PlayerDeathListener implements Listener {
 		
 		@EventHandler
 		public void onPlayerDeath(PlayerDeathEvent e) {
+			
+			if (e.getEntity().getKiller() instanceof Monster) {
+				Monster mob = (Monster) e.getEntity();
+				Player p = e.getEntity();
+				e.setDeathMessage(null);
+				
+				Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("mob_message").replace("<mob>", mob.getName().replace("<player>", p.getName()))));
+			}
 			if (e.getEntity().getKiller() instanceof Player) {
 				
 				Player killer = e.getEntity().getKiller();
 				Player p= e.getEntity();
 				
-				killer.sendMessage(Utils.chat("&8[&a*&8] &7 Le has petado el culo a &6 " + p.getDisplayName()));
-				p.sendMessage(Utils.chat("&8[&c*&8] &7 Tu culo ha sido petado por &c " + killer.getDisplayName()));
+				if (killer != p) {
+					killer.sendMessage(Utils.chat(plugin.getConfig().getString("killer_message".replace("<player>", p.getName()))));
+					p.sendMessage(Utils.chat(plugin.getConfig().getString("playerdeath_message").replace("<killer>",killer.getName())));
+				}
+				
 				e.setDeathMessage(null);
 				Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("death_message").replace("<player>", p.getName())));
 				return;

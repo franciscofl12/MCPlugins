@@ -1,1 +1,4 @@
 death_message: '&a<player> &7ha muerto!'
+mob_message: '&a<player> &7es tan malo que ha muerto por un &c<mob>'
+killer_message: '&8[&a*&8] &7 Le has petado el culo a &6 <player>'
+playerdeath_message: '&8[&c*&8] &7 Tu culo ha sido petado por &c <killer>'
