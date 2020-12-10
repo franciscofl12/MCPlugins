@@ -1,2 +1,2 @@
 # Plugins
-Java Plugins creados por franciscofl12 y juanmiclucena
+Basic java plugins created by franciscofl12 & juanmiclucena
